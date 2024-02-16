@@ -23,7 +23,6 @@ RUN pip install pymdown-extensions \
 && pip install mkdocs-blog-plugin \
 && pip3 install mkdocs-blogging-plugin
 
-# The following line is bcause of mkdocs build error: Unable to read git logs of
 RUN git config --global --add safe.directory '*'
 
 ENTRYPOINT ["/usr/src/mkdocs/.local/bin/mkdocs"]
