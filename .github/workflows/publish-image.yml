@@ -19,9 +19,9 @@ jobs:
       matrix:
         include:
           - dockerfile: mkdocs-git/Dockerfile
-            tag: mkdocs-git:0.1
+            tag: ghcr.io/dlorent/mkdocs-git:0.1
           - dockerfile: mkdocs/Dockerfile
-            tag: mkdocs:0.1
+            tag: ghcr.io/dlorent/mkdocs:0.1
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
