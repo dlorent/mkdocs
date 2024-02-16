@@ -2,5 +2,5 @@ FROM alpine:latest
 RUN apk add \
 bash \
 git
-ADD run.sh /
+ADD mkdocs-git/run.sh /
 CMD ["/run.sh"]
