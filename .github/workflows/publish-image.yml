@@ -17,9 +17,11 @@ jobs:
       packages: write
     strategy:
       matrix:
-        dockerfile:
-          - 'mkdocs-git/Dockerfile'
-          - 'mkdocs/Dockerfile'
+        include:
+          - dockerfile: mkdocs-git/Dockerfile
+            tag: mkdocs-git:0.1
+          - dockerfile: mkdocs/Dockerfile
+            tag: mkdocs:0.1
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -44,5 +46,5 @@ jobs:
           context: .
           file: ${{ matrix.dockerfile }}
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: ${{ matrix.tag }}
           labels: ${{ steps.meta.outputs.labels }}
