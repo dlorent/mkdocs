@@ -8,12 +8,12 @@ jobs:
   docker:
     runs-on: ubuntu-latest
       strategy:
-	matrix:
+        matrix:
 	  include:
-	    - image: mkdocs-git
-	      dockerfile: mkdocs-git/Dockerfile
-	    - image: mkdocs
-	      dockerfile: mkdocs/Dockerfile
+            - image: mkdocs-git
+              dockerfile: mkdocs-git/Dockerfile
+            - image: mkdocs
+              dockerfile: mkdocs/Dockerfile
     steps:
       -
         name: Checkout
