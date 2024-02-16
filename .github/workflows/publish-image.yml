@@ -7,13 +7,13 @@ on:
 jobs:
   docker:
     runs-on: ubuntu-latest
-	strategy:
-	  matrix:
-		include:
-		  - image: mkdocs-git
-		    dockerfile: mkdocs-git/Dockerfile
-		  - image: mkdocs
-		    dockerfile: mkdocs/Dockerfile
+      strategy:
+	matrix:
+	  include:
+	    - image: mkdocs-git
+	      dockerfile: mkdocs-git/Dockerfile
+	    - image: mkdocs
+	      dockerfile: mkdocs/Dockerfile
     steps:
       -
         name: Checkout
