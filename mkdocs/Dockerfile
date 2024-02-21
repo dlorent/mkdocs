@@ -17,6 +17,7 @@ RUN pip install --upgrade pip
 RUN pip install pymdown-extensions \
 && pip install mkdocs \
 && pip install mkdocs-material \
+&& pip install mkdocs-dracula-theme \
 && pip install mkdocs-rtd-dropdown \
 && pip install mkdocs-git-revision-date-plugin \
 && pip install mkdocs-git-revision-date-localized-plugin \
